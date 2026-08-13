@@ -15,7 +15,7 @@ import { SUPPORTED_TAGS } from "./languages.ts";
 import { extractFencedBlocks, type FencedBlock } from "./parser.ts";
 
 const REPORT_TYPE = "fence-check:report";
-const LOGIC_VERSION = "v6";
+const LOGIC_VERSION = "v6.1";
 const MAX_REPORT_ISSUES = 40;
 
 interface SessionEntry {
@@ -159,7 +159,7 @@ function formatReport(results: BlockCheck[]): string {
 	const lines: string[] = [
 		`**fence-check ${LOGIC_VERSION}: ${results.length} block(s) with syntax errors**`,
 		"",
-		"_语法提示，无需回应——后续写代码注意严谨即可。_",
+		"_No response needed — keep the code rigorous. 语法提示，无需回应——后续写代码注意严谨即可。_",
 	];
 	let total = 0;
 	for (const result of results) {
