@@ -1,0 +1,30 @@
+{
+  "name": "pi-fence-check",
+  "version": "0.3.0",
+	"description": "Syntax-check fenced code blocks in assistant messages (text + thinking) via tree-sitter WASM — 112 languages, real-time, quiet by design.",
+  "type": "module",
+  "license": "MIT",
+	"keywords": ["pi", "pi-package", "pi-extension", "tree-sitter", "syntax-check", "markdown", "code-blocks", "datalog"],
+  "dependencies": {
+    "tree-sitter-wasm": "1.1.4",
+    "web-tree-sitter": "0.26.12"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tree-sitter-cli": "^0.26.8"
+  },
+	"files": [
+		"index.ts",
+		"check.ts",
+		"parser.ts",
+		"languages.ts",
+		"tsconfig.json",
+		"grammars/",
+		"skills/",
+		"README.zh-CN.md"
+	],
+	"pi": {
+		"extensions": ["./index.ts"],
+		"skills": ["./skills"]
+	}
+}
